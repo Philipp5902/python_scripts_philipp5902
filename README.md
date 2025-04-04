@@ -1,4 +1,4 @@
-# Python-Projekte von Filip
+# Python-Projekte von Philipp5902
 
 Dies ist eine Sammlung meiner ersten Python-Projekte, die ich im Rahmen meiner Informatik-Lernreise erstellt habe. Hier findest du verschiedene Programme, die ich geschrieben habe, um meine Programmierfähigkeiten zu verbessern.
 
