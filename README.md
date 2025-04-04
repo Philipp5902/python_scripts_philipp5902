@@ -52,5 +52,5 @@ Ein Spiel, bei dem der Benutzer eine zufällige Zahl erraten muss, die vom Progr
 
 ## 🔗 GitHub Repository:
 
-- [Link zu meinem GitHub-Repository]([https://github.com/philipp5902/python-projekte-filip](https://github.com/philipp5902/python_scripts_philipp5902))
+- [Link zu meinem GitHub-Repository]([(https://github.com/philipp5902/python_scripts_philipp5902)])
 
