@@ -31,6 +31,12 @@ Ein Spiel, bei dem der Benutzer eine zufällige Zahl erraten muss, die vom Progr
 - Lade die Datei `währungs_umrechner.py` herunter.
 - Führe die Datei mit Python aus: `python währungs_umrechner.py`.
 
+  ### 4. **Quiz-Spiel**
+
+**Wie man es ausführt:**
+- Lade die Datei `quiz.py` herunter.
+- Führe die Datei mit Python aus: `python quiz.py`.
+
 ## 🧑‍💻 Wie man die Programme ausführt:
 
 1. **Python installieren**:
