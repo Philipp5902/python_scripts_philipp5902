@@ -1,103 +1,187 @@
-def gib_tipp():
-    tipp = input("Brauchst du einen Tipp?")
-    if tipp.lower() == "ja":
-        welcher_tipp = int(input("Für welche Frage?"))
-    # Tipp 1
-        if welcher_tipp == 1:
-            print("Anfangsbuchstabe ist ein B...")
-    # Tipp 2
-        if welcher_tipp == 2:
-            print("Liegt in Japan...")
-    # Tipp 3
-        if welcher_tipp == 3:
-            print("Wir atmen es ein...")
+# Punkte
+punkte = 0
 
-    # Tipp 4
-        if welcher_tipp == 4:
-            print("Eine Spinne hat 8 Beine und ist kein Insekt...")
+# Weiter
+def weiter():
+    weiter = input("Bist du bereit für die nächste Frage?")
+    if weiter.lower() == "ja":
+        print("Super! Hier ist deine nächste Frage:")
 
-    # Tipp 5
-        if welcher_tipp == 5:
-            print("Dieses Tier lebt im Wasser und ist wirklich riesig...")
+# Richtig
+def richtig():
+    global punkte
+    punkte += 1
+    print("Richtig! + 1 Punkt...")
 
-print("Hallo! Ich bin Quizzie.")
-print("Ich habe mir 5 Fragen für dich ausgedacht.")
-print("Pro richtiger Frage bekommst du 1 Punkt.")
-print("Wenn du falsch antwortest, verlierst du einen Punkt.")
+# Falsch
+def falsch():
+    global punkte
+    punkte -= 1
+    print("Falsch! - 1 Punkt...")
 
-punkte = 0  # Punktestand
+# Quiz Start
+print("Herzlich Willkommen beim Länder Quiz.")
+print("Aber bevor es richtig los geht, musst du mir etwas wichtiges beantworten...")
+x = input("Wie heißt der Programmierer dieses Quizzes?")
+if x.lower() == "philipp":
+    punkte += 1
+    print("Du weißt Bescheid... + 1 Ehrenpunkt 💪")
+elif x.lower() == "pika":
+    punkte += 1
+    print("Du weißt Bescheid... + 1 Ehrenpunkt 💪")
+elif x.lower() == "pikachu":
+    punkte += 1
+    print("Du weißt Bescheid... + 1 Ehrenpunkt 💪")
+else:
+    punkte -= 1
+    print("Wow, das ist hart peinlich...- 1 Punkt😣😂")
 
-anfang = input("Bist du bereit?")
+# Wie viele Fragen soll das Quiz beinhalten?
+wie_viele = int(input("Möchtest du ein 3, 5 oder 10 Fragen Quiz?"))
 
-if anfang.lower() == "ja":
+# 3 Fragen Quiz
+if wie_viele == 3:
+    print("So, jetzt geht's los :) ")
 
-    # Frage 1
-    print("Frage 1:")
-    print("Was ist die Hauptstadt von Belgien? ")
-    gib_tipp()
-    frage1 = input("Antwort:")
-    if frage1.lower() == "brüssel":
-        punkte += 1  # Punktestand erhöhen
-        print("Richtig! Du hast", punkte, "Punkt/e.")
+    # Frage 1/3
+    frage = input("In welchem Kontinent liegt die Türkei?")
+    if frage.lower() == "europa":
+        richtig()
+    elif frage.lower() == "asien":
+        richtig()
     else:
-        punkte -= 1  # Punktestand verringern
-        print("Geo ist wohl nicht dein stärkstes Fach... du hast", punkte, "Punkt/e.")
+        falsch()
 
-    # Frage 2
-    weiter1 = input("Möchtest du weitermachen?")
-    if weiter1.lower() == "ja":
-        print("Frage 2:")
-        print("Was ist die größte Stadt der Welt? ")
-        gib_tipp()
-        frage2 = input("Antwort:")
-        if frage2.lower() == "tokyo":
-            punkte += 1
-            print("Richtig! Du hast", punkte, "Punkt/e.")
-        else:
-            punkte -= 1
-            print("Das war wohl nix... du hast", punkte, "Punkt/e.")
+    # Frage 2/3
+    frage = input("Für was steht die Abkürzung USA?")
+    if frage.lower() == "vereinigte staaten von amerika":
+        richtig()
+    else:
+        falsch()
 
-    # Frage 3
-    weiter2 = input("Möchtest du weitermachen?")
-    if weiter2.lower() == "ja":
-        print("Frage 3:")
-        print("Welches Element hat das chemische Symbol 'O'?")
-        gib_tipp()
-        frage3 = input("Antwort:")
-        if frage3.lower() == "sauerstoff":
-            punkte += 1
-            print("Richtig! Du hast", punkte, "Punkt/e.")
-        else:
-            punkte -= 1
-            print("Das war wohl nix... du hast", punkte, "Punkt/e.")
+    # Frage 3/3
+    frage = input("Welches Land hat die größte Fläche der Welt?")
+    if frage.lower() == "russland":
+        richtig()
+    else:
+        falsch()
 
-    # Frage 4
-    weiter3 = input("Möchtest du weitermachen?")
-    if weiter3.lower() == "ja":
-        print("Frage 4:")
-        print("Wie viele Beine hat ein Insekt?")
-        gib_tipp()
-        frage4 = input("Antwort:")
-        if frage4 == "6":
-            print("Richtig! Du hast", punkte, "Punkt/e.")
-        else:
-            punkte -= 1
-            print("Das war wohl nix... du hast", punkte, "Punkt/e.")
+# 5 Fragen Quiz
+elif wie_viele == 5:
+    print("So, jetzt geht's los :) ")
 
-    # Frage 5
-    weiter4 = input("Möchtest du weitermachen?")
-    if weiter4.lower() == "ja":
-        print("Frage 5:")
-        print("Was ist das größte Tier der Welt?")
-        gib_tipp()
-        frage5 = input("Antwort:")
-        if frage5.lower() == "blauwal":
-            print("Richtig! Du hast", punkte, "Punkt/e.")
-        else:
-            punkte -= 1
-            print("Das war wohl nix... du hast", punkte, "Punkt/e")
+    # Frage 1/5
+    frage = input("In welchem Kontinent liegt die Türkei?")
+    if frage.lower() == "europa":
+        richtig()
+    elif frage.lower() == "asien":
+        richtig()
+    else:
+        falsch()
 
-    # Ende
-    print("Du hast" , punkte , "Punkte!")
-    if punkte <= 2:
-        print("Beim nächsten mal klappts vielleicht besser...")
+    # Frage 2/5
+    frage = input("Für was steht die Abkürzung USA?")
+    if frage.lower() == "vereinigte staaten von amerika":
+        richtig()
+    else:
+        falsch()
+
+    # Frage 3/5
+    frage = input("Welches Land hat die größte Fläche der Welt?")
+    if frage.lower() == "russland":
+        richtig()
+    else:
+        falsch()
+
+    # Frage 4/5
+    frage = input("Welches Land hat am meisten Inseln?")
+    if frage.lower() == "schweden":
+        richtig()
+    else:
+        falsch()
+
+    # Frage 5/5
+    frage = input("Welches europäische Land hat keine Küste?")
+    if frage.lower() == "schweiz":
+        richtig()
+    else:
+        falsch()
+
+# 10 Fragen Quiz
+elif wie_viele == 10:
+    print("So, jetzt geht's los :) ")
+
+    # Frage 1/10
+    frage = input("In welchem Kontinent liegt die Türkei?")
+    if frage.lower() == "europa":
+        richtig()
+    elif frage.lower() == "asien":
+        richtig()
+    else:
+        falsch()
+
+    # Frage 2/10
+    frage = input("Für was steht die Abkürzung USA?")
+    if frage.lower() == "vereinigte staaten von amerika":
+        richtig()
+    else:
+        falsch()
+
+    # Frage 3/10
+    frage = input("Welches Land hat die größte Fläche der Welt?")
+    if frage.lower() == "russland":
+        richtig()
+    else:
+        falsch()
+
+    # Frage 4/10
+    frage = input("Welches Land hat am meisten Inseln?")
+    if frage.lower() == "schweden":
+        richtig()
+    else:
+        falsch()
+
+    # Frage 5/10
+    frage = input("Welches europäische Land hat keine Küste?")
+    if frage.lower() == "schweiz":
+        richtig()
+    else:
+        falsch()
+
+    # Frage 6/10
+    frage = input("Was ist die Amtssprache in Brasilien?")
+    if frage.lower() == "portugiesisch":
+        richtig()
+    else:
+        falsch()
+
+    # Frage 7/10
+    frage = input("Welches Land ist bekannt für Pyramiden?")
+    if frage.lower() == "ägypten":
+        richtig()
+    else:
+        falsch()
+
+    # Frage 8/10
+    frage = input("In welchem Land liegt die Stadt Reykjavík?")
+    if frage.lower() == "island":
+        richtig()
+    else:
+        falsch()
+
+    # Frage 9/10
+    frage = input("Was ist die Hauptstadt von Kanada?")
+    if frage.lower() == "ottawa":
+        richtig()
+    else:
+        falsch()
+
+    # Frage 10/10
+    frage = input("Welches Land hat die längste Küstenlinie der Welt?")
+    if frage.lower() == "kanada":
+        richtig()
+    else:
+        falsch()
+
+# Quiz Ende
+print("Du hast" , punkte , "Punkte.")
