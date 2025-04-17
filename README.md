@@ -43,6 +43,12 @@ Ein Spiel, bei dem der Benutzer eine zufällige Zahl erraten muss, die vom Progr
 - Lade die Datei `quiz_vocabeln.py` herunter.
 - Führe die Datei mit Python aus: `python quiz_vocabeln.py`.
 
+    ### 7. **Länder Quiz-Spiel**
+
+**Wie man es ausführt:**
+- Lade die Datei `quiz_countries.py` herunter.
+- Führe die Datei mit Python aus: `python quiz_countries.py`.
+
 ## 🧑‍💻 Wie man die Programme ausführt:
 
 1. **Python installieren**:
