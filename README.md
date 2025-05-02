@@ -2,10 +2,6 @@
 
 Dies ist eine Sammlung meiner ersten Python-Projekte, die ich im Rahmen meiner Informatik-Lernreise erstellt habe. Hier findest du verschiedene Programme, die ich geschrieben habe, um meine Programmierfähigkeiten zu verbessern.
 
-**Wie man es ausführt:**
-- Lade die Datei `quiz_countries.py` herunter.
-- Führe die Datei mit Python aus: `python quiz_countries.py`.
-
 ## 🧑‍💻 Wie man die Programme ausführt:
 
 1. **Python installieren**:
